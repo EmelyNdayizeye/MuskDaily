@@ -5,17 +5,47 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #1DA1F2;
+  --primary-dark: #1A91DA;
+  --secondary: #E1E8ED;
+  --accent: #FF4D4D;
+  --muted: #687684;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #15202B;
+    --foreground: #F7F9F9;
+    --primary: #1DA1F2;
+    --primary-dark: #1A91DA;
+    --secondary: #273340;
+    --accent: #FF4D4D;
+    --muted: #8899A6;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-[var(--secondary)] rounded-xl shadow-lg p-6;
+  }
+  
+  .button-primary {
+    @apply bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-semibold py-2 px-4 rounded-full transition-colors;
+  }
+  
+  .button-secondary {
+    @apply bg-[var(--secondary)] hover:opacity-90 text-[var(--foreground)] font-semibold py-2 px-4 rounded-full transition-colors;
+  }
 }
