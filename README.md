@@ -7,7 +7,7 @@ An AI-powered dashboard that curates and summarizes Elon Musk's daily activities
 - **Real-time Data Aggregation**
   - Automated fetching from X/Twitter API
   - Integration with multiple news sources
-  - SpaceX and Tesla news updates
+  - SpaceX and Tesla cars news updates
 
 - **AI-Powered Insights**
   - Daily automated summaries
